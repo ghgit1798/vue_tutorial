@@ -1,0 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <label><input type="radio" value="car1.png" v-model="fileName">
+    car1</label>
+    <label><input type="radio" value="car2.png" v-model="fileName">
+    car2</label>
+    <p>{{ fileName }} 선택 </p>
+    <img v-bind:src="fileName"></img>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            fileName: ''
+        }
+    })
+</script>
