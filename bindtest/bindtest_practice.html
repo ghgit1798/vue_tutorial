@@ -1,0 +1,48 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- style 여러 개 지정 시, v-bind는 comma 사용 | html에서는 semi-colon 사용 -->
+
+<style>
+    .strike-through {
+        text-decoration: line-through;
+        color: lightgray
+    }
+    .dark {
+        background-color: gray
+    }
+</style>
+
+
+<body>
+
+<div id="app">
+    <p><a v-bind:href="mylink">네이버로연결</a></p>
+    <p><img v-bind:src="myimg">car1.png 표시</img></p>
+    <p v-bind:align="align1">텍스트를 왼쪽정렬</p>
+    <p v-bind:align="align2">텍스트를 가운데정렬</p>
+    <p v-bind:align="align3">텍스트를 오른쪽정렬</p>
+    <p :style="{color : myFontcolor}">인라인 스타일로 글자색을 빨간색</p>
+    <p :style="{color: myFontcolor, fontSize : myFontsize}"> 인라인 스타일로 글자크기를 150% 크게 빨간색으로</p>
+    <p :style="{color: myFontcolor, fontSize : myFontsize, backgroundColor: myBackColor}">인라인 스타일로 글자크기를 150% 크게 빨간색으로 배경은 노란색으로</p>
+    <p :class="darkClass">dark class지정</p>
+    <p :class="[darkClass, strikeClass]">dark, strike-through class 지저</p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            mylink: 'https://naver.com',
+            myimg: 'car1.png',
+            align1: 'left',
+            align2: 'center',
+            align3: 'right',
+            myFontcolor: 'red',
+            myFontsize: '150%',
+            myBackColor: 'yellow',
+            darkClass: 'dark',
+            strikeClass: 'strike-through'
+        }
+    })
+</script>
+
+</body>

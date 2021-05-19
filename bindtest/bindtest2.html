@@ -1,0 +1,15 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <a href="https://western-sky.tistory.com">링크를 직접지정</a><p>
+    <a v-bind:href="myURL">링크를 v-bind로 지정</a>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            myURL: 'https://western-sky.tistory.com'
+        }
+    })
+</script>
