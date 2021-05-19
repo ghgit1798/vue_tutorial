@@ -1,0 +1,21 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ myCar }}</p>
+    <p>{{ myCar[1].name }}  {{ myCar[1].price }}천만원</p>
+</div>
+
+<script>
+    var carList = [
+                {name:'Genesis', price:8000},
+                {name:'Porsche', price:13000},
+                {name:'Malibu', price:7000},
+            ]
+
+    new Vue({
+        el: '#app',
+        data: {
+            myCar: carList
+        }
+    })
+</script>

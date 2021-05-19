@@ -1,0 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    {{ $data }}
+    <hr>
+    <li v-for="(item, key) in $data">{{key}} : {{item}}</li>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            firstCar:'Genesis',
+            secondCar:'Porsche',
+            thirdCar:'Malibu'
+                
+        }
+    })
+</script>
