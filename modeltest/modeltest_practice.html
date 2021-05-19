@@ -1,0 +1,22 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    이름: <input v-model="myName"></textarea>
+    <p>좋아하는 색은 : </p>
+    <label><input type="radio" value="red" v-model="myColor">빨강</label><br>
+    <label><input type="radio" value="green" v-model="myColor">녹색</label><br>
+    <label><input type="radio" value="blue" v-model="myColor">파랑</label><br>
+    <label><input type="radio" value="yellow" v-model="myColor">노랑</label><br>
+    <label><input type="radio" value="gray" v-model="myColor">회색</label><br>
+    <p>내 이름은 {{ myName }}이고 좋아하는 색은 {{ myColor }} 입니다.</p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            myName:'',
+            myColor:''
+        }
+    })
+</script>
