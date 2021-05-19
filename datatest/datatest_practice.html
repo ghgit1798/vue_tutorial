@@ -1,0 +1,30 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <h1> 다양한 데이터의 출력</h1>
+    <h3>{{myText}}</h3>
+    <h3>{{myHtmlText}}</h3>
+    <h3>숫자 {{myNumber}}</h3>
+    <h3>부울형 {{myBool}}</h3>
+    <h3>배열 {{myArray}}</h3>
+    <h3>오브젝트 {{myObject}}</h3>
+    {{$data}}
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            myText:'Study Vue, Just print like this',
+            myHtmlText: '<h3> Add tag and print like this </h3>',
+            myNumber: 12345,
+            myBool:true,
+            myArray:[1,2,3,4,5],
+            myObject:[
+                {name:'GENESIS', price:7000},
+                {name:'Porsche', price:13000},
+                {name:'Malibu', price:8000},
+            ]
+        }
+    })
+</script>
