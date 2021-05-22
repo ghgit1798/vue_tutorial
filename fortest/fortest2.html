@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="item in objArray">{{ item.name }} \ {{item.price}} </li>
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            objArray: [
+                {name: '찐빵', price:100},
+                {name: '메론빵', price:200},
+                {name: '크로와상', price:300}
+            ]
+        }
+    })
+</script>

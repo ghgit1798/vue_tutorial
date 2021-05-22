@@ -1,0 +1,43 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <li v-for="(num, index) in number_list">{{num}}
+        <button v-on:click="modifyNumber(index)">변경</button><button v-on:click="deleteNumber(index)">삭제</button><br>
+    </li>
+    
+    <button v-on:click="addNumber">추가</button>
+    <button v-on:click="sortData(number_list)">소트</button>
+    <button v-on:click="showGuGu">구구단보이기</button><br>
+    <ul v-for="num in number_list">
+        <li v-if="visible" v-for="i in 9">{{num}} * {{i}} = {{num*i}}</li>
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            number_list: [2,3,4,5,6,7,8,9],
+            visible: false
+        },
+        methods: {
+            addNumber: function() {
+                this.number_list.push(1);
+            },
+            sortData: function(listdata) {
+                listdata.sort(function(a,b) {return a<b ? -1:1});
+            },
+            modifyNumber: function(index) {
+                num = this.number_list[index] + 1;
+                this.number_list.splice(index, 1, num);
+            },
+            deleteNumber: function(index) {
+                this.number_list.splice(index, 1);
+            },
+            showGuGu: function() {
+                this.visible = true
+            }
+        }
+    })
+</script>
+

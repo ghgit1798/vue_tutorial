@@ -1,0 +1,34 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="item in myArray">{{item}}</li>
+    </ul>
+    <button v-on:click="addList">맨 뒤에 추가</button><br>
+    <button v-on:click="addObj(3)">네 번째에 추가</button><br>
+    <button v-on:click="changeObj(0)">첫 번째를 변경</button><br>
+    <button v-on:click="deleteObj(1)">두 번째를 삭제</button><br>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            myArray: ['첫번째','두번째','세번째','네번째','다섯번째']
+        },
+        methods: {
+            addList: function() {
+                this.myArray.push("[맨 뒤에 추가]");
+            },
+            addObj: function(index) {
+                this.myArray.splice(index, 0, '[추가]')
+            },
+            changeObj: function(index) {
+                this.myArray.splice(index, 1, '[변경]')
+            },
+            deleteObj: function(index) {
+                this.myArray.splice(index, 1);
+            }
+        }
+    })
+</script>
