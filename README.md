@@ -3,15 +3,15 @@
 해당 예제들은 백견불여일타 Vue.js 입문 도서를 읽고 구현하였습니다.
 
 
-├──vue_tutorial <br>
-|  ├── hello <br>
-|  ├── bindtest <br>
-|  ├── datatest <br>
-|  ├── modeltest <br>
-|  ├── fortest <br>
-|  ├── iftest <br>
-|  └── ontest <br>
-└───── README.md <br>
+vue_tutorial <br>
+  ├── hello <br>
+  ├── bindtest <br>
+  ├── datatest <br>
+  ├── modeltest <br>
+  ├── fortest <br>
+  ├── iftest <br>
+  ├── ontest <br>
+  └── README.md <br>
 
 1. hello: Vue.js hello world example
 2. bindtest: Vue.js v-bind example
